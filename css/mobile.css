@@ -1,0 +1,64 @@
+body {
+    background-color: #000000;
+    margin: 0px;
+}
+
+nav {
+    width: calc(100% - 50px);
+    padding: 25px;
+    text-align: center;
+    position: fixed;
+    background-color: rgb(0,0,0,0.25);
+    z-index: 9;
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+}
+
+.logo {
+    width: 187px;
+    height: 27px;
+    background-image: url(../img/logo.png);
+    background-size: contain;
+}
+
+.burger {
+    position: absolute;
+    right: 0;
+    top: 0px;
+    width: 40px;
+    height: 40px;
+    margin: 20px 25px 0px 0px;
+    background-size: cover;
+    background-image: url(../img/menu.png);
+
+    cursor: pointer;
+    display: block;
+}
+
+input[type="checkbox"]  {
+    display: none;
+}
+
+input + .burger + div {
+    display: none;
+}
+
+input:checked + .burger + div {
+    display:block;
+}
+
+.menu {
+    position: absolute;
+    right: 0;
+    top: 60px;
+    padding: 10px 10px 10px 0px;
+    display: none;
+    background-color: #212121;
+}
+
+.menu-section {
+    font-family: Tahoma;
+    color: #ffffff;
+    font-size: 24px;
+    margin: 10px 20px 10px 20px;
+}
